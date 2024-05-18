@@ -1,0 +1,64 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  width: 868px;
+  font-family: Arial, sans-serif;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+.cardTitle {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.cardPrice {
+  font-size: 1.25em;
+  color: #e67e22;
+}
+
+.cardLocation {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.cardDescription {
+  padding: 16px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.cardDetails {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.cardDetail {
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+.detailLabel {
+  font-weight: bold;
+  color: #555;
+}
+.detailContent {
+  color: #777;
+  margin-left: 5px;
+}

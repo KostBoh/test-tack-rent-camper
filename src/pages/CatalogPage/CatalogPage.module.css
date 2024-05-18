@@ -1,0 +1,20 @@
+.catalog {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.filterContainer {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.camperCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
