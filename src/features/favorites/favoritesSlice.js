@@ -1,10 +1,10 @@
-const { createSlice } = require('@reduxjs/toolkit');
+// const { createSlice } = require('@reduxjs/toolkit');
 
-const favoritesSlice = createSlice({
-  name: 'favorites',
-  initialState: [],
-  reducers: {},
-});
+// const favoritesSlice = createSlice({
+//   name: 'favorites',
+//   initialState: [],
+//   reducers: {},
+// });
 
-export const { actions } = favoritesSlice;
-export default favoritesSlice.reducer;
+// export const { actions } = favoritesSlice;
+// export default favoritesSlice.reducer;
