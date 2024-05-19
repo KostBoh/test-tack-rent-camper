@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers/rootReducer';
-import campersReducer from './campersSlice';
+// import rootReducer from './reducers/rootReducer';
+import campersReducer, { setFavorites } from './campersSlice';
 
 const store = configureStore({
   reducer: {
