@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/test-task-rent-camper/static/css/main.40086a92.css",
-    "main.js": "/test-task-rent-camper/static/js/main.5015c3f5.js",
+    "main.css": "/test-task-rent-camper/static/css/main.dae2fe7e.css",
+    "main.js": "/test-task-rent-camper/static/js/main.df85bb2a.js",
     "index.html": "/test-task-rent-camper/index.html",
-    "main.40086a92.css.map": "/test-task-rent-camper/static/css/main.40086a92.css.map",
-    "main.5015c3f5.js.map": "/test-task-rent-camper/static/js/main.5015c3f5.js.map"
+    "main.dae2fe7e.css.map": "/test-task-rent-camper/static/css/main.dae2fe7e.css.map",
+    "main.df85bb2a.js.map": "/test-task-rent-camper/static/js/main.df85bb2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.40086a92.css",
-    "static/js/main.5015c3f5.js"
+    "static/css/main.dae2fe7e.css",
+    "static/js/main.df85bb2a.js"
   ]
 }
