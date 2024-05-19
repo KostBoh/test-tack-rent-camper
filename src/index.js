@@ -16,7 +16,7 @@ const store = configureStore({
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/test-task-rent-camper">
       <App />
     </BrowserRouter>
   </Provider>
