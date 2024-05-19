@@ -24,27 +24,3 @@ const CampersList = ({ adverts }) => {
 };
 
 export default CampersList;
-
-// import CamperCard from 'components/CamperCard/CamperCard';
-// import styles from './CamperList.module.css';
-
-// const CamperList = ({ adverts }) => {
-//   const [visibleCount, setVisibleCount] = useState(4);
-//   const loadMore = () => {
-//     setVisibleCount(prevCount => prevCount + 4);
-//   };
-//   return (
-//     <div className={styles.list}>
-//       {adverts.slice(0, visibleCount).map(advert => (
-//         <CamperCard key={advert._id} advert={advert} />
-//       ))}
-//       {visibleCount < adverts.length && (
-//         <button onClick={loadMore} className={styles.loadMoreButton}>
-//           Load More
-//         </button>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default CamperList;
