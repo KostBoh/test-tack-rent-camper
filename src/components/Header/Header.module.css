@@ -1,9 +1,9 @@
 .navList {
+  max-width: 1440px;
+  margin: 0 auto;
   list-style-type: none;
   display: flex;
   gap: 20px;
-  padding: 0;
-  margin: 0;
   background-color: #f7f7f7;
   border-bottom: 2px solid #f2f4f7;
 }
@@ -14,8 +14,14 @@
   text-decoration: none;
   color: #475467;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
   color: #e44848;
+}
+
+.activeLink {
+  color: #e44848;
+  text-decoration: underline;
 }

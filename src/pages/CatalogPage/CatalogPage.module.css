@@ -1,13 +1,14 @@
 .catalog {
-  display: flex;
-  flex-direction: row;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
   padding: 20px;
   background-color: #f8f9fa;
 }
 
 .filterContainer {
-  width: 100%;
-  max-width: 300px;
   margin-bottom: 20px;
 }
 
@@ -15,6 +16,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
-  max-width: 900px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 2em;
+  color: #333;
 }

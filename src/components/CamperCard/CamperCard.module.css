@@ -76,3 +76,13 @@
   font-weight: bold;
   color: #555;
 }
+.card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card button svg {
+  width: 24px;
+  height: 24px;
+}

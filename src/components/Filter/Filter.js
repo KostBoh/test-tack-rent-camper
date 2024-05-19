@@ -2,15 +2,46 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import styles from './Filter.module.css';
 
-const Filter = () => {
+const Filter = ({ onFilter }) => {
   const campers = useSelector(state => state.campers.items);
   const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedVehicleTypes, setSelectedVehicleTypes] = useState([]);
+  const [equipment, setEquipment] = useState({
+    airConditioner: false,
+    automatic: false,
+    kitchen: false,
+    TV: false,
+    shower: false,
+  });
 
   const locations = campers.map(camper => camper.location);
   const uniqueLocations = [...new Set(locations)];
 
   const handleLocationChange = e => {
     setSelectedLocation(e.target.value);
+  };
+
+  const handleEquipmentChange = e => {
+    const { name, checked } = e.target;
+    setEquipment(prevState => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+
+  const handleVehicleTypeChange = e => {
+    const { value, checked } = e.target;
+    setSelectedVehicleTypes(prevState =>
+      checked ? [...prevState, value] : prevState.filter(type => type !== value)
+    );
+  };
+
+  const handleSearch = () => {
+    onFilter({
+      location: selectedLocation,
+      ...equipment,
+      vehicleType: selectedVehicleTypes,
+    });
   };
 
   return (
@@ -29,42 +60,81 @@ const Filter = () => {
       <div className={styles.filterSection}>
         <h3>Vehicle Equipment</h3>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="airConditioner"
+            checked={equipment.airConditioner}
+            onChange={handleEquipmentChange}
+          />
           Air Conditioner
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="automatic"
+            checked={equipment.automatic}
+            onChange={handleEquipmentChange}
+          />
           Automatic
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="kitchen"
+            checked={equipment.kitchen}
+            onChange={handleEquipmentChange}
+          />
           Kitchen
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="TV"
+            checked={equipment.TV}
+            onChange={handleEquipmentChange}
+          />
           TV
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="shower"
+            checked={equipment.shower}
+            onChange={handleEquipmentChange}
+          />
           Shower/WC
         </label>
       </div>
       <div className={styles.filterSection}>
         <h3>Vehicle Type</h3>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            value="van"
+            onChange={handleVehicleTypeChange}
+          />
           Van
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            value="fullyIntegrated"
+            onChange={handleVehicleTypeChange}
+          />
           Fully Integrated
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            value="alcove"
+            onChange={handleVehicleTypeChange}
+          />
           Alcove
         </label>
       </div>
-      <button className={styles.filterButton}>Search</button>
+      <button className={styles.filterButton} onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 };
