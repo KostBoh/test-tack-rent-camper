@@ -5,16 +5,26 @@
 }
 
 .loadMoreButton {
-  margin-top: 20px;
-  padding: 10px 20px;
+  color: #fff;
+  font-family: Inter;
   font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background-color: #e44848;
+  width: 166px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
   border: none;
-  border-radius: 5px;
 }
 
 .loadMoreButton:hover {
-  background-color: #0056b3;
+  background-color: #d84343;
 }

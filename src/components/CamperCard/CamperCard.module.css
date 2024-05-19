@@ -77,7 +77,7 @@
   color: #555;
 }
 .card button {
-  background: none;
+  /* background: none; */
   border: none;
   cursor: pointer;
 }
@@ -85,4 +85,27 @@
 .card button svg {
   width: 24px;
   height: 24px;
+}
+.moreButton {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background-color: #e44848;
+  width: 166px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.moreButton:hover {
+  background-color: #d84343;
 }

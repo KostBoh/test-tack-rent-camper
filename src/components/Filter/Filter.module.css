@@ -29,15 +29,27 @@
 }
 
 .filterButton {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
+
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background-color: #e44848;
+  width: 166px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .filterButton:hover {
-  background-color: #0056b3;
+  background-color: #d84343;
 }
