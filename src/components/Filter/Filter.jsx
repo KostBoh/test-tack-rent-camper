@@ -30,10 +30,7 @@ const Filter = ({ onFilter }) => {
   };
 
   const handleVehicleTypeChange = e => {
-    const { value, checked } = e.target;
-    setSelectedVehicleTypes(prevState =>
-      checked ? [...prevState, value] : prevState.filter(type => type !== value)
-    );
+    setSelectedVehicleTypes(e.target.value);
   };
 
   const handleSearch = () => {
@@ -109,24 +106,30 @@ const Filter = ({ onFilter }) => {
         <h3>Vehicle Type</h3>
         <label>
           <input
-            type="checkbox"
+            type="radio"
+            name="vehicleType"
             value="van"
+            checked={selectedVehicleTypes === 'van'}
             onChange={handleVehicleTypeChange}
           />
           Van
         </label>
         <label>
           <input
-            type="checkbox"
+            type="radio"
+            name="vehicleType"
             value="fullyIntegrated"
+            checked={selectedVehicleTypes === 'fullyIntegrated'}
             onChange={handleVehicleTypeChange}
           />
           Fully Integrated
         </label>
         <label>
           <input
-            type="checkbox"
+            type="radio"
+            name="vehicleType"
             value="alcove"
+            checked={selectedVehicleTypes === 'alcove'}
             onChange={handleVehicleTypeChange}
           />
           Alcove

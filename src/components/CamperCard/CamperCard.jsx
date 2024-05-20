@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../redux/campersSlice';
 import styles from './CamperCard.module.css';
 import Modal from 'components/Modal/Modal';
-import Review from 'components/Review/Review';
 
 const CamperCard = ({ advert }) => {
   const {
@@ -122,7 +121,7 @@ const CamperCard = ({ advert }) => {
         {isModalOpen && (
           <Modal camper={advert} onClose={handleCloseModal}>
             {advert.reviews.map(review => (
-              <Review key={review.id} review={review} />
+              <review key={review.id} review={review} />
             ))}
           </Modal>
         )}
